@@ -75,6 +75,7 @@ void setup() {
   Serial.println(WiFi.macAddress());
 
   pinMode(LED_BUILTIN, OUTPUT);
+  tcsSetup();
 }
 
 void loop() {
@@ -87,6 +88,8 @@ void loop() {
   } else {
     digitalWrite(LED_BUILTIN, LOW);
   }
+
+  tcsLoop();
 
   delay(10);
 }
